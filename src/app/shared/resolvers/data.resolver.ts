@@ -13,7 +13,7 @@ export const dataResolver: ResolveFn<
   const loadingService = inject(LoadingService);
   loadingService.isLoading.set(true);
   return dataService.getData().pipe(
-    delay(5000),
+    delay(3000),
     catchError((error: HttpErrorResponse) => {
       console.error('Data fetch error:', error);
       return of({ error: error }); // Returning fallback data
