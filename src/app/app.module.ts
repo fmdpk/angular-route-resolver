@@ -13,7 +13,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @NgModule({
-  declarations: [AppComponent, CompAComponent, CompBComponent],
+  declarations: [AppComponent],
   imports: [BrowserModule, AppRoutingModule, MatProgressBarModule],
   providers: [
     provideClientHydration(),

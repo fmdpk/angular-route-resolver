@@ -7,12 +7,18 @@ import { dataResolver } from './shared/resolvers/data.resolver';
 const routes: Routes = [
   {
     path: 'comp-a',
-    component: CompAComponent,
+    loadComponent: () =>
+      import('./components/comp-a/comp-a.component').then(
+        (c) => c.CompAComponent
+      ),
     resolve: { data: dataResolver },
   },
   {
     path: 'comp-b',
-    component: CompBComponent,
+    loadComponent: () =>
+      import('./components/comp-b/comp-b.component').then(
+        (c) => c.CompBComponent
+      ),
   },
   {
     path: '',
